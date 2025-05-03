@@ -1,0 +1,234 @@
+Last login: Tue Apr 15 16:29:05 on ttys002
+ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-57-generic aarch64)
+
+
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~$ export GITHUB_EMAIL=i.drozd0509@gmail.com
+ubuntu@Ubuntu-GUI:~$ alias edit=nano
+ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ mkdir ~/.config
+mkdir: cannot create directory ‘/home/ubuntu/.config’: File exists
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ ls -la ~/.config
+total 56
+drwx------ 11 ubuntu ubuntu 4096 Mar 11 19:21 .
+drwxr-x--- 20 ubuntu ubuntu 4096 Apr 15 17:10 ..
+drwx------  2 ubuntu ubuntu 4096 Mar 11 19:21 dconf
+drwx------  3 ubuntu ubuntu 4096 Mar 11 19:09 evolution
+-rw-rw-r--  1 ubuntu ubuntu    3 Mar 11 19:10 gnome-initial-setup-done
+drwx------  3 ubuntu ubuntu 4096 Mar 11 19:17 gnome-session
+drwxr-xr-x  2 ubuntu ubuntu 4096 Mar 11 19:09 goa-1.0
+-rw-rw-r--  1 ubuntu ubuntu    0 Mar 11 19:09 .gsd-keyboard.settings-ported
+drwx------  2 ubuntu ubuntu 4096 Mar 11 19:21 gtk-3.0
+drwx------  3 ubuntu ubuntu 4096 Mar 11 19:09 ibus
+drwxr-xr-x  2 ubuntu ubuntu 4096 Mar 11 19:16 nautilus
+drwx------  2 ubuntu ubuntu 4096 Mar 11 19:21 pulse
+drwx------  2 ubuntu ubuntu 4096 Mar 11 19:10 update-notifier
+-rw-------  1 ubuntu ubuntu  633 Mar 11 19:09 user-dirs.dirs
+-rw-rw-r--  1 ubuntu ubuntu    1 Mar 11 19:09 user-dirs.locale
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cat > ~/.config/hub <<EOF
+> github.com:
+> - user: Dr0-0zdik
+> oauth_token: *****
+> protocol: https
+> EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git config --global hub.protocol https
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ mkdir projects/lab02 && cd projects/lab02
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git init
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git config --global user.name Dr0-ozdik
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git config --global user.email i.drozd0509@gmail.com
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git config --global user.name Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git config --global user.email i.drozd0509@gmail.com
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab02$ git remote add origin https://github.com/Dr0-ozdik777/lab02.git
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git pull origin main
+From https://github.com/Dr0-ozdik777/lab02
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Already up to date.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ touch README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	node/
+	projects/
+	reports/
+	scripts/
+	tasks/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git commit -m"added README_2.md"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	node/
+	projects/
+	reports/
+	scripts/
+	tasks/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$  git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git commit -m"added README.md"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	node/
+	projects/
+	reports/
+	scripts/
+	tasks/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$  git push origin master
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 875 bytes | 875.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Dr0-ozdik777/lab02/pull/new/master
+remote: 
+To https://github.com/Dr0-ozdik777/lab02.git
+ * [new branch]      master -> master
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ *build*/
+-bash: *build*/: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$  git pull origin master
+From https://github.com/Dr0-ozdik777/lab02
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git log
+commit feea3b126fc8ee9399d272ea4ac7cfdb2c427ce2 (HEAD -> master, origin/master, origin/main)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Fri Apr 18 23:41:14 2025 +0300
+
+    Initial commit
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ mkdir sources
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ mkdir include
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ mkdir examples
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cat > sources/print.cpp <<EOF
+> #include <print.hpp>
+
+void print(const std::string& text, std::ostream& out)
+{
+  out << text;
+}
+
+void print(const std::string& text, std::ofstream& out)
+{
+  out << text;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cat > include/print.hpp <<EOF
+> #include <fstream>
+#include <iostream>
+#include <string>
+
+void print(const std::string& text, std::ofstream& out);
+void print(const std::string& text, std::ostream& out = std::cout);
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cat > examples/example1.cpp <<EOF
+> #include <print.hpp>
+
+int main(int argc, char** argv)
+{
+  print("hello");
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cat > examples/example2.cpp <<EOF
+> #include <print.hpp>
+
+#include <fstream>
+
+int main(int argc, char** argv)
+{
+  std::ofstream file("log.txt");
+  print(std::string("hello"), file);
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ edit README.md
+Command 'edit' not found, but can be installed with:
+sudo apt install mailcap
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ sudo apt install mailcap
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  mailcap
+0 upgraded, 1 newly installed, 0 to remove and 69 not upgraded.
+Need to get 23.8 kB of archives.
+After this operation, 90.1 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+Fetched 23.8 kB in 0s (116 kB/s)   
+Selecting previously unselected package mailcap.
+(Reading database ... 199734 files and directories currently installed.)
+Preparing to unpack .../mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                   
+Scanning linux images...                                                                                
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ edit README.md
+
+[1]+  Stopped                 edit README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.README.md.swp
+	examples/
+	include/
+	node/
+	projects/
+	reports/
+	scripts/
+	sources/
+	tasks/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git commit -m"added sources"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.README.md.swp
+	examples/
+	include/
+	node/
+	projects/
+	reports/
+	scripts/
+	sources/
+	tasks/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git push origin master
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Everything up-to-date
+                                                                               
+                                                                               
+The system is going down for poweroff now
